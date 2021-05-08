@@ -30,7 +30,7 @@ function add_trivia_button_listener() {
 
 function render_trivia_game() {
 
-    $("main").load("../trivia.html", function() {
+    $("main").load("trivia.html", function() {
         controlLoginUI(auth.currentUser);
 
         if (active_game) {

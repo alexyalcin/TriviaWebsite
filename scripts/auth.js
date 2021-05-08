@@ -76,7 +76,7 @@ function add_signin_listener() {
 
 function add_auth_status_listener() {
     auth.onAuthStateChanged(async function (user) {
-        $("main").load("../trivia.html", function() {
+        $("main").load("trivia.html", function() {
             if (user) {
                 controlLoginUI(user);
                 console.log("user logged in: ", user);

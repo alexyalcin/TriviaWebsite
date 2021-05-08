@@ -10,7 +10,7 @@ function add_leaderboard_listener() {
 
 //renders entire leadeboard
 async function render_leaderboard() {
-    $("main").load("../leaderboard.html");
+    $("main").load("leaderboard.html");
     await load_leaderboard_elements(10);
 }
 
