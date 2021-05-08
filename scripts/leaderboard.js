@@ -21,7 +21,6 @@ async function load_leaderboard_elements(n) {
     for (let i = 0; i < n; i++) {
         if (docs[i]) {
             let data = docs[i].data();
-            console.log(data);
             let row_html = render_leaderboard_row(i + 1, data.user, data.score, data.time);
             $("#leaderboard tbody").append(row_html);
         }

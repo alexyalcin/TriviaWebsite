@@ -1,7 +1,5 @@
 $(document).ready(function() {
-    generateBreedQuestion().then(function(x) {
-        console.log(x);
-    });
+
 });
 
 
@@ -13,7 +11,7 @@ async function getDogBreeds() {
             "x-api-key" : "26e24bd5-7cc3-4893-965e-a946d8f636f4"
         }
       });
-      console.log(result.data);
+
       return result.data;
 }
 

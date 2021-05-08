@@ -8,7 +8,6 @@ async function getTeamByLeague(league) {
         method: 'get',
         url: "https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=" + league,
       });
-      console.log(result.data);
       return result.data;
 }
 
