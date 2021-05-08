@@ -13,7 +13,6 @@
     async function updateStats() {
         try {
             let userDataDoc = await db.collection('userData').where('uid', '==', auth.currentUser.uid).get();
-            console.log(userDataDoc.docs[0]);
             let docData = userDataDoc.docs[0].data();
             let docId = userDataDoc.docs[0].id;
             $("#user-stat .variable").text(auth.currentUser.displayName);

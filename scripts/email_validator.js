@@ -26,11 +26,9 @@ function add_email_validation() {
 }
 
 async function validate_email(email) {
-    return {"quality_score": ".7"};
     const result = await axios({
         method: 'get',
         url: 'https://emailvalidation.abstractapi.com/v1/?api_key=6f6585dd1c814335b9bb8e56c9a6945f&email=' + email,
       });
-      console.log(result);
       return result.data;
 }

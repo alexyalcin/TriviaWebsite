@@ -32,7 +32,7 @@ async function generateNewQuestion(filter = null) {
     }
     let type_index = getRandomInt(type_choices.length);
     let question = await type_choices[type_index].generator();
-    console.log(question);
+
     return question;
 }
 
@@ -74,8 +74,8 @@ class TriviaGame {
 
     countdown() {
         this.timeOnQuestion-=1;
-        console.log(this.timeOnQuestion);
 
+        
         if (this.timeOnQuestion < 1) {
             this.questionActive = false;
             clearInterval(this.interval);
@@ -110,7 +110,7 @@ class TriviaGame {
     }
 
     check_gamestate() {
-        console.log(this.score, this.lives);
+
         if (this.questionNum === this.totalQuestions || this.lives === 0) {
             if (!this.isGameOver) {
                 this.upload_highscore();
@@ -124,7 +124,6 @@ class TriviaGame {
     async get_highscore() {
         try {
             let userDataDoc = await db.collection('userData').where('uid', '==', this.user.uid).get();
-            console.log(userDataDoc.docs[0]);
             let docData = userDataDoc.docs[0].data();
 
             if (docData.highscore < this.score) {
@@ -132,7 +131,6 @@ class TriviaGame {
             }
             this.highscore = docData.highscore;
         } catch (e) {
-            console.log(e);
         }
         return 0;
     }
@@ -147,7 +145,7 @@ class TriviaGame {
 
         try {
             let userDataDoc = await db.collection('userData').where('uid', '==', this.user.uid).get();
-            console.log(userDataDoc.docs[0]);
+
             let docData = userDataDoc.docs[0].data();
             let docId = userDataDoc.docs[0].id;
 
@@ -159,7 +157,7 @@ class TriviaGame {
             docData.gamesPlayed = docData.gamesPlayed + 1;
             db.collection("userData").doc(docId).update(docData);
         } catch (e) {
-            console.log(e);
+
         }
         
     }

@@ -22,7 +22,6 @@ function add_signup_listener() {
         if (parseFloat(validity.quality_score) > .5) {
             try {
                 let cred = await auth.createUserWithEmailAndPassword(email, password);
-                console.log(cred);
                 auth.currentUser.updateProfile({
                     displayName: displayName
                 })
@@ -65,7 +64,6 @@ function add_signin_listener() {
 
         try {
             let cred = await auth.signInWithEmailAndPassword(email, password);
-            console.log(cred);
             $("#modalLogin").modal("hide");
             $("#login-form").trigger("reset");
         } catch (e) {
@@ -79,10 +77,8 @@ function add_auth_status_listener() {
         $("main").load("trivia.html", function() {
             if (user) {
                 controlLoginUI(user);
-                console.log("user logged in: ", user);
             } else {
                 controlLoginUI(user);
-                console.log("user logged out");
             }
         });
 

@@ -9,7 +9,6 @@ async function getCountryFlagByRegion(region) {
         method: 'get',
         url: '//restcountries.eu/rest/v2/region/' + regions[region] + "?fields=name;flag",
       });
-      console.log(result.data);
       return result.data;
 }
 
@@ -65,7 +64,7 @@ async function generateCapitalQuestion() {
 
     //pick region
     let region_index = getRandomInt(5);
-    console.log(region_index, "region");
+
     let countries = await getCountryCapitalByRegion(region_index);
 
     //pick four random countries
