@@ -1,0 +1,28 @@
+<div id ="stats-div">
+    <h1 id = "user-stat">User: <span class="variable"></span></h1>
+    <h2 id = 'highscore-stat'>Highscore: <span class="variable"></span></h2>
+    <h2 id = 'gamesplayed-stat'>Games Played: <span class="variable"></span></h2>
+    <h2 id = 'average-stat'>Average Score: <span class="variable"></span></h2>
+</div>
+
+<script> 
+    $(document).ready(function() {
+        updateStats();
+    })
+
+    async function updateStats() {
+        try {
+            let userDataDoc = await db.collection('userData').where('uid', '==', auth.currentUser.uid).get();
+            console.log(userDataDoc.docs[0]);
+            let docData = userDataDoc.docs[0].data();
+            let docId = userDataDoc.docs[0].id;
+            $("#user-stat .variable").text(auth.currentUser.displayName);
+            $("#highscore-stat .variable").text(docData.highscore);
+            $("#gamesplayed-stat .variable").text(docData.gamesPlayed);
+            $("#average-stat .variable").text(Math.round(docData.averageScore));
+
+        } catch (e) {
+            console.log(e);
+        }
+    }
+</script>

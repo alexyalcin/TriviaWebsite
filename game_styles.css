@@ -1,0 +1,117 @@
+/*************GameFrame***********/
+
+#game-frame{
+    background-color:bisque;
+    margin-left:10vw;
+    height:80vh;
+    width: 80vw;
+    border: solid;
+}
+
+.game-stats {
+    display: inline;
+    float: left;
+    margin-left: 1%;
+    margin-right: 4%;
+    font-size: 150%;
+}
+
+#game-options {
+    display: inline;
+    float: right;
+    margin-left: 1%;
+    margin-right: 4%;
+    font-size: 300%;
+}
+
+#game-main {
+    margin-top: 5%;
+    margin-left: 10%;
+    height: 90%;
+    width: 80%;
+}
+
+#game-main-img {
+    margin-left:5%;
+    margin-top: 5%;
+    height: 40%;
+    width:90%;
+    text-align: center;
+} 
+#game-main-question {
+    font-size: 200%;
+    margin-top: 2.5%;
+    margin-bottom:5%;
+    height: 10%;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+#new-game-button {
+    margin-top:20%;
+    margin-left: 30%;
+
+}
+#new-game-button button {
+    height:30vh;
+    width:30vw;
+    font-size:300%;
+
+}
+
+#game-answers {
+    width:100%;
+    margin-top:5%;
+    margin-left: 0%;
+    margin-bottom:5%;
+    text-align:center;
+}
+
+.answer {
+    padding-inline: 5%;
+    margin-inline:2%;
+    margin-top:1%;
+}
+
+#timer {
+    margin-top: 6%;
+    margin-left:25%;
+    text-align:center;
+    font-size:200%;
+    width:50%;
+    height:5%;
+}
+
+#next-question {
+    margin-top:2%;
+    margin-left:25%;
+    text-align:center;
+    width:50%;
+    height:10%;
+}
+
+#game-over {
+    margin-top:0%;
+    margin-left:25%;
+    text-align:center;
+    width:50%;
+    height:10%;
+}
+
+#game-over button {
+}
+
+#game-over h2 {
+    margin-bottom: 1%;
+}
+
+#game-over h1 {
+    margin-top:1%;
+}
+
+#game-main-img img {
+    border:solid;
+    background-color: dimgray;
+    height:80%;
+    width:auto;
+}

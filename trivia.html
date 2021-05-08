@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="game_styles.css" />
+
+
+<div id ="game-frame" class = "logged-in">
+    <div id = "game-bar">
+        <li class = "game-stats" id = 'score-label'>Score: <span class = "variable">0</span></li>
+        <li class = "game-stats" id = "streak-label">Streak: <span class = "variable">0</span></li>
+        <li class = "game-stats" id = "lives-label">Lives: <span class = "variable">3</span></li>
+        <li class = "game-stats" id = "questions-label">Questions Left: <span class = "variable">10</span></li>
+
+        <li class = 'dropdown' id = 'game-options'>
+            <a class = "btn btn-lg btn-secondary dropdown-toggle" href= "#" role = "button" id = "options-dropdown-link" data-bs-toggle="dropdown" >Options</a>
+            <ul class = "dropdown-menu" aria-labelledby="options-dropdown-link">
+                <li><a class = "dropdown-item" href = "#" onclick="new_game()" >New Game</a></li>
+                <li><a class = "dropdown-item" href = "#" onclick="main_menu()" >Quit Game</a></li>
+                <li><a class = "dropdown-item" href="#modal-settings" data-bs-toggle="modal">Settings</a></li>
+            </ul>
+        </li>
+    </div>
+    <div id = "game-main" hidden = "true">
+        <div id = "game-main-img">
+            <img src = "https://pngimg.com/uploads/question_mark/question_mark_PNG129.png">
+        </div>
+        <div id = "game-main-question">
+            Sample
+        </div>
+        <div id = "game-answers">
+            <li class = "btn btn-primary btn-lg answer" id = "answerA" onclick="answer_clicked(0)">A) False</li>
+            <li class = "btn btn-primary btn-lg answer" id = "answerB" onclick="answer_clicked(1)">B) False</li>
+            <li class = "btn btn-primary btn-lg answer" id = "answerC" onclick="answer_clicked(2)">C) True</li>
+            <li class = "btn btn-primary btn-lg answer" id = "answerD" onclick="answer_clicked(3)">D) False</li>
+        </div>
+        <div id = "timer">
+            <span>Time: <span class = "variable">20</span></span>
+        </div>
+        <div id = "next-question" hidden="true">
+            <button class="btn btn-primary btn-lg" id="next-question-button" onclick="next_question()">Next Question</button>
+        </div> 
+        <div id = "game-over" hidden="true">
+            <h1>GAME OVER</h1>
+            <h2 id="final-score">Score: 0</h2>
+            <h2 id="high-score">Your highscore: 0</h2><br>
+            <button class="btn btn-primary btn-lg" id="next-question-button" onclick="new_game()">New Game</button>
+        </div> 
+    </div>
+
+    <div id = "new-game-button">
+        <button class = "btn btn-primary btn-lg" id = "new_game" onclick="new_game()">New Game!</button>
+    </div>
+</div>
+
+<div class= 'logged-out'>
+    <p><a href="#modalLogin" data-bs-toggle="modal">Login</a> or <a href="#modalSignup" data-bs-toggle="modal">Sign up</a> to play trivia!</p>
+</div>

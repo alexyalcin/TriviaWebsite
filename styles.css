@@ -1,0 +1,74 @@
+/************Navbar************/
+
+.nav-wrapper {
+    padding-top: 0;
+    padding-bottom: 1%;
+    height: 5vw;
+    border:solid;
+    text-align: center;
+}
+
+.nav-wrapper li {
+    display:inline;
+    text-align: center;
+    padding: 0;
+    margin-right: 5vw;
+    font-size:2vw;
+}
+
+.navbar {
+    float: right;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-wrapper li:hover{
+    background-color: #d9d9d9;
+    
+}
+
+.nav-logo {
+    height:5vw;
+    width:2vw;
+    display: inline;
+    float:left;
+    padding-left: 3vw;
+}
+
+img {
+    height:80%;
+    width: auto;
+}
+/*************Main***********/
+main {
+    margin-top: 5%
+}
+
+/*************GameFrame***********/
+
+#game-frame{
+    margin-left:10vw;
+    height:80vh;
+    width: 80vw;
+    border: solid;
+}
+/*************Modal Window***********/
+.modal .btn {
+    height:100%;
+    width: 20vw;
+    border:solid;
+}
+
+.modal label {
+    width:20vw;
+}
+
+.modal_body .text_input {
+    width:30vw;
+}
+
+.modal-footer {
+    text-align:left;
+}
